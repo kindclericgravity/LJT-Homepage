@@ -9,55 +9,51 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Junteng Liu's Homepage"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+name                     : "Junteng Liu"
+description              : "Ph.D. Student at HKUST NLP Group, focusing on NLP, Machine Learning, LLM Reasoning, Hallucination"
+url                      : "https://kindclericgravity.github.io"
+baseurl                  : ""
+repository               : "kindclericgravity/LJT-Homepage"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Junteng Liu"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  bio              : "Ph.D. Student in Computer Science at Hong Kong University of Science and Technology (HKUST), supervised by Prof. Junxian He. Research interests include natural language processing, machine learning, LLM reasoning, and hallucination mitigation in vision-language models."
+  location         : "Hong Kong"
+  employer         : "Hong Kong University of Science and Technology"
+  email            : "jliugi@connect.ust.hk"
 
   # Academic websites
   academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  arxiv            : # URL
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
 
 
   # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
+  bitbucket        : # Username
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "Vicent0205"
   kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  stackoverflow    : # User number or user number and name
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -74,7 +70,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : "junteng88716710" # Username for X / Twitter
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
@@ -82,7 +78,7 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
+# Publication Category
 publication_category:
   books:
     title: 'Books'
@@ -110,7 +106,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  branch                 : "master"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -128,13 +124,11 @@ atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
-
 # SEO Related
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
-
 
 # Social Sharing
 twitter:
@@ -145,8 +139,6 @@ facebook:
   publisher              :
 og_image                 :  # Social media default site image
 og_description           :  # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
@@ -297,65 +289,316 @@ sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-
-# Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
 # Plugins
 plugins:
+  - jekyll-avatar
+  - jekyll-coffeescript
+  - jekyll-default-layout
   - jekyll-feed
   - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-include-cache
   - jekyll-paginate
-  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-remote-theme
   - jekyll-redirect-from
-  - jemoji
-
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - .jekyll-metadata
+  - vendor/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: true
+
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+permalink: /:categories/:title/
+
+include:
+  - .htaccess
+  - _pages
 
 
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
 
+keep_files:
+  - .git
+  - .svn
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# These settings control types of collections used by the template
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+
+# Defaults for site config
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: true
+
+read_time: true
+comments: true
+share: true
+related: true
 
 # HTML Compression
 # - https://jch.penibelst.de/
+
 compress_html:
   clippings: all
-  ignore:
-    envs: development
+  comments: ""
+  endings: all
+  start Blooming: false
+  websockets: true
+
+
+# Teaching Courses
+# defaults for teaching
+
+directions:
+  enable: "true"
+  random_level: "true"
+  random_sample: "false"
+  random_pages: "true"
+  multiple_courses: "true"
+  teaching_legend:
+    img: ""
+    width: "70"
+    height: "40"
+  yt_guid: ""
+  giscus:
+    repo: ""
+    repo_id: ""
+    category: ""
+    category_id: ""
+    mapping: "pathname"
+    reactions_enabled: "1"
+    input_position: "top"
+    loading: "lazy"
+    lang: ""
+    repository_id: ""
+    theme: "preferred_color_scheme"
+    reactions_enabled: "1"
+    "@context": "http://schema.org"
+    "@type": "Discussion"
+    name: "giscus @ https://github.com/academicpages/academicpages.github.io"
+    generator: "https://giscus.app"
+    id: ""
+    data-source: "github-discussions"
+    mapping: "pathname"
+    term: ""
+    reactions_enabled: "1"
+    topic: ""
+
+# optional
+comments:
+  provider: "false"
+  # disqus:
+    shortname: ""
+
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:jliugi@connect.ust.hk"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Vicent0205"
+    - label: "X"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/junteng88716710"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"
+      url: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
+
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-remote-theme
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+include:
+  - .htaccess
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Please exclude any items they act as a default or ignored mark.
+Exclude from processing. If you have to exclude, please add the corresponding files
+
+# Custom: exclude temp and system files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+
+
+# A better search
+simple-jekyll-search:
+  full_text_search: true
+  search_results_count: 20
+  search_results_thumbnail:
+    enable: "false"
+  search:
+    max_num_results: "20"
+    indexing_enabled: "true"
+    enable_advanced_search:
+      enable: "false"
+      match: "strict"
+
+# optional top menu actions
+
+# Follow us
+favicon:
+  image: "https://academicpages.github.io/images/favicon.png"
+  shortcuts:
+    name: "academicpages.github.io"
+    url: "/icons/icon-192x192.png"
+  color: "#000000"
+  raw_tags: ""
+  theme_color: "#ffffff"
+  sizes: "192x192"
+
+# Profile
+profile:
+  name: Junteng Liu
+  bio_short: "First-year PhD Student at HKUST"
+  avatar: "/images/profile.png"
+  location: Hong Kong
+  employer: Hong Kong University of Science and Technology
+  email: jliugi@connect.ust.hk
+  phone: 
+  website: 
+
+# Publications
+authors:
+  example:
+    name: "Example Name"
+    url: "https://example.com/"
+    affiliations: "Example University"
+
+# Data Templates
+data:        
+  authors: 
+    
+  publications:
+    
+
+
